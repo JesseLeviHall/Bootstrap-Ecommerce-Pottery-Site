@@ -1,0 +1,64 @@
+body {
+    background: url('img/CortneyFerrari.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color:chartreuse;
+  }
+
+nav, a {
+  font-family: 'Texturina', serif;
+  font-size: 18pt
+}
+
+  .card-special {
+    background: url('img/CortneyFerrari.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color: cornsilk;
+    font-family: 'Texturina', serif;
+  }
+
+  .card-item {
+      background-color: black;
+  }
+
+h1 {
+  font-size: 44pt;
+}
+
+.modal-special {
+  background: url('img/CortneyFerrari.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color:rgb(8, 8, 8);
+}
+
+.modal-body {
+  background-color: black;
+}
+
+.modal-header {
+  background-color: black;
+}
+
+.modal-title {
+  color:chartreuse;
+}
+
+.card-checkout {
+  color:rgb(8, 8, 8);
+}
+
+.card-checkout h1{
+  font-size: 22pt;
+}
+
+.card-checkout h2{
+  font-size: 16pt;
+}

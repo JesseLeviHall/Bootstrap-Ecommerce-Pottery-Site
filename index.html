@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@563&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Cortney's Creative Ceramics</title>
+</head>
+<body>
+  <header class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class= "position-absolute top-0 start-50 translate-middle-x">
+                    <canvas  id="c"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>  
+  </header>
+
+<nav class="navbar navbar-nav navbar-expand-md navbar-dark" style="margin-top:150px;">
+    <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav position-absolute top-100 start-50 translate-middle">
+                <li class="nav-item px-5 "><a class="nav-link active" href="index.html">Shop</a></li>
+                <li class="nav-item px-5"><a class="nav-link" href="aboutme.html">About</a></li>
+                <li class="nav-item px-5"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item px-5"><a class="nav-link" href="contactme.html">Contact</a></li>
+                <li class="nav-item px-5"><button type="button"class="btn btn-outline-light btn-sm    text-nowrap" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa              fa-shopping-cart"></i> Cart (3)
+                </button>
+                <li class="nav-item px-5"><a href="checkout.html" class="btn btn-outline-light btn-sm text-nowrap"><i class="fa fa-long-arrow-right"></i> Checkout</a></li>   
+            </ul>  
+        </div>
+    </div>
+  </nav>
+
+  <div class="modal border-rounded" id="cartModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <div class="card card-checkout border-rounded" >
+                <div class="card-body bg-light">
+                    <div class="row g-5">
+                        <div class="col order-md-last">
+                            <h1 class="d-flex justify-content-between align-item-center mb-3">
+                                <span class="text-dark">Your Cart</span>
+                                <span id="cartCount" class="badge bg-primary rounded-pill"><i class="fa fa-shopping-cart"></i> 3</span>
+                            </h1>
+                        </div>
+                    </div>  
+                    <div class="row g-5">
+                        <div class="col">
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h2 class="my-0">Eye Mug Large</h2>
+                                        <small class="text-muted">Eyeball mug mouth handle...big version <span class="text-muted"><button type="button" class="btn btn-outline-dark btn-sm text-nowrap">Remove</button></span> </small>
+                                    </div>
+                                        <span class="text-muted">$25</span>                         
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h2 class="my-0">Eye Mug Large</h2>
+                                        <small class="text-muted">Eyeball mug mouth handle...big version <span class="text-muted"><button type="button" class="btn btn-outline-dark btn-sm text-nowrap">Remove</button></span> </small>
+                                    </div>
+                                        <span class="text-muted">$25</span>                               
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h2 class="my-0">Eye Mug Large</h2>
+                                        <small class="text-muted">Eyeball mug mouth handle...big version <span class="text-muted"><button type="button" class="btn btn-outline-dark btn-sm text-nowrap">Remove</button></span> </small>
+                                    </div>
+                                        <span class="text-muted">$25</span>                               
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <span>Total (USD)</span>
+                                    <strong>$75</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+        <div class="modal-footer bg-dark">
+          <a class="btn btn-primary btn-sm text-nowrap" role="button" href="checkout.html"><i class="fa fa-long-arrow-right"></i>Checkout</a> 
+          <button type="button" class="btn btn-outline-light btn-sm text-nowrap" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container">
+    <div class="card card-special border-0" style="margin-top:145px;">
+        <div class="card-body">
+            <h1 class="text-center m-5 fw-light">Cortney's Creative Ceramics</h1>
+            <h2 class="text-center m-2 fw-light">Odd Wares for Unique Life-Styles</h2>
+            <p class=" text-center m-2 lead">Welcome to my shop!</p>
+        </div>
+            <div style="height: 600px">
+              <div class="row offset-1"> 
+                <div class="col col-sm-3 mt-5">                 <!--here begins an item -->
+                  <div class="card card-item border-0" style="max-width: 9rem;">
+                    <img class="card-img-top" src="img/bone-colorful/bone-colorful1.JPG" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="text-left card-title text-nowrap">Bone and Scales</p>
+                            <div class="row">
+                              <div class="col-4 ms-1  ">
+                                <button type="button" class="btn btn-primary btn-sm text-nowrap" data-target="#addToCart"><i class="fa fa-cart-plus fa-lg"></i>
+                                </button>
+                              </div>
+                              <div class="col">
+                                <button type="button" class="btn btn-success btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#viewBoneScales">
+                                View
+                                </button>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="viewBoneScales" tabindex="-1" aria-labelledby="boneScales" aria-hidden="true">
+                  <div class="modal-dialog modal-special modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="robotStyle">The Bone Handle and Colored Scales Mug</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-6">
+                            <div id="carouselBoneScales" class="carousel slide" data-bs-ride="carousel">
+
+                              <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselBoneScales" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselBoneScales" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselBoneScales" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselBoneScales" data-bs-slide-to="3" aria-label="Slide 0"></button>
+                              </div>
+
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img src="img/bone-colorful/bone-colorful1.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="img/bone-colorful/bone-colorful2.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="img/bone-colorful/bone-colorful3.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="img/bone-colorful/bone-colorful4.JPG" class="d-block w-100" alt="...">
+                                </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselBoneScales" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselBoneScales" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                            </div>
+                          </div>
+                         </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>      <!--here ends an item -->
+
+
+              <div class="col col-sm-3 mt-5"> <!--here begins an item -->
+                <div class="card card-item border-0" style="max-width: 9rem;">
+                  <img class="card-img-top" src="img/rainbowmug/rainbow-mug-1.jpg" alt="Card image cap">
+                      <div class="card-body">
+                          <p class="text-left card-title">Rainbow Mug</p>
+                          <div class="row">
+                            <div class="col-4 ms-1  ">
+                              <button type="button" class="btn btn-danger  btn-sm text-nowrap" data-target="#addToCart" disabled>Sold
+                              </button>
+                            </div>
+                            <div class="col ms-2 ">
+                              <button type="button" class="btn btn-success btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#viewRainbowMug">
+                              View
+                              </button>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal fade" id="viewRainbowMug" tabindex="-1" aria-labelledby="rainbowMug" aria-hidden="true">
+                <div class="modal-dialog modal-special modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="rainbowMug">The Rainbow Mug</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <div id="carouselRainbowmug" class="carousel slide" data-bs-ride="carousel">
+
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselRainbowmug" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselRainbowmug" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselRainbowmug" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselRainbowmug" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="img/rainbowmug/rainbow-mug-1.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="img/rainbowmug/rainbow-mug-2.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="img/rainbowmug/rainbow-mug-3.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="img/rainbowmug/rainbow-mug-4.jpg" class="d-block w-100" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRainbowmug" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselRainbowmug" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                        </div>
+                       </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-danger" disabled>Sold</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!--here ends an item-->
+
+            <div class="col col-sm-3 mt-5">                 <!--here begins an item -->
+              <div class="card card-item border-0" style="max-width: 9rem;">
+                <img class="card-img-top" src="img/eye-snake-handle/eye-snake-handle1.JPG" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="text-left card-title text-nowrap">Snake-eye Cup</p>
+                        <div class="row">
+                          <div class="col-4 ms-1  ">
+                            <button type="button" class="btn btn-primary btn-sm text-nowrap" data-target="#addToCart"><i class="fa fa-cart-plus fa-lg"></i>
+                            </button>
+                          </div>
+                          <div class="col">
+                            <button type="button" class="btn btn-success btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#viewSnakeEye">
+                            View
+                            </button>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="viewSnakeEye" tabindex="-1" aria-labelledby="snakeEye" aria-hidden="true">
+              <div class="modal-dialog modal-special modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="snakeEye">Snake Handle Cup with Eyes</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <div id="carouselSnakeEye" class="carousel slide" data-bs-ride="carousel">
+
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselSnakeEye" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselSnakeEye" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselSnakeEye" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselSnakeEye" data-bs-slide-to="3" aria-label="Slide 0"></button>
+                          </div>
+
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="img/eye-snake-handle/eye-snake-handle1.JPG" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="img/eye-snake-handle/eye-snake-handle2.JPG" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="img/eye-snake-handle/eye-snake-handle3.JPG" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="img/eye-snake-handle/eye-snake-handle4.JPG" class="d-block w-100" alt="...">
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSnakeEye" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselSnakeEye" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                      </div>
+                     </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>      <!--here ends an item -->
+
+
+          <div class="col col-sm-3 mt-5">                 <!--here begins an item -->
+            <div class="card card-item border-0" style="max-width: 9rem;">
+              <img class="card-img-top" src="img/wood-scorpion-mush/wood-scorpion-mush1.JPG" alt="Card image cap">
+                  <div class="card-body">
+                      <p class="text-left card-title text-nowrap">Scorpion Cup</p>
+                      <div class="row">
+                        <div class="col-4 ms-1  ">
+                          <button type="button" class="btn btn-primary btn-sm text-nowrap" data-target="#addToCart"><i class="fa fa-cart-plus fa-lg"></i>
+                          </button>
+                        </div>
+                        <div class="col">
+                          <button type="button" class="btn btn-success btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#viewScorpion">
+                          View
+                          </button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="modal fade" id="viewScorpion" tabindex="-1" aria-labelledby="scorpion" aria-hidden="true">
+            <div class="modal-dialog modal-special modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="snakeEye">Cup with scorpion and mushroom</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <div id="carouselScorpion" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselScorpion" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselScorpion" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselScorpion" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselScorpion" data-bs-slide-to="3" aria-label="Slide 0"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/wood-scorpion-mush/wood-scorpion-mush1.JPG" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/wood-scorpion-mush/wood-scorpion-mush2.JPG" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/wood-scorpion-mush/wood-scorpion-mush3.JPG" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/wood-scorpion-mush/wood-scorpion-mush4.JPG" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselScorpion" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselScorpion" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                   </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>      <!--here ends an item -->
+  
+    </div>  <!--here ends the first row-->
+
+    <div class="row offset-1">                              <!--here begins second row-->
+      <div class="col col-sm-3 mt-5">                 <!--here begins an item -->
+        <div class="card card-item border-0" style="max-width: 9rem; min-width: 9rem;">
+          <img class="card-img-top" src="img/gear-bot/gear-bot1.JPG" alt="Card image cap">
+              <div class="card-body">
+                  <p class="text-left card-title text-nowrap">Gear Mug</p>
+                  <div class="row">
+                    <div class="col-4 ms-1  ">
+                      <button type="button" class="btn btn-primary btn-sm text-nowrap" data-target="#addToCart"><i class="fa fa-cart-plus fa-lg"></i>
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-success btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#viewGearMug">
+                      View
+                      </button>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="viewGearMug" tabindex="-1" aria-labelledby="gearMug" aria-hidden="true">
+        <div class="modal-dialog modal-special modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="gearMug">Steam Punk Style Mug</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-6">
+                  <div id="carouselGearMug" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselGearMug" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselGearMug" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselGearMug" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/gear-bot/gear-bot1.JPG" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/gear-bot/gear-bot2.JPG" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/gear-bot/gear-bot3.JPG" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGearMug" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselGearMug" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+               </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      <!--here ends an item -->
+
+    <div class="col col-sm-3 mt-5">                 <!--here begins an item -->
+      <div class="card card-item border-0" style="max-width: 9rem;">
+        <img class="card-img-top" src="img/bone-handle-dimple/bone-handle-dimple1.JPG" alt="Card image cap">
+            <div class="card-body">
+                <p class="text-left card-title text-nowrap">Bone Textured</p>
+                <div class="row">
+                  <div class="col-4 ms-1  ">
+                    <button type="button" class="btn btn-primary btn-sm text-nowrap" data-target="#addToCart"><i class="fa fa-cart-plus fa-lg"></i>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-success btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#viewBoneTextured">
+                    View
+                    </button>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viewBoneTextured" tabindex="-1" aria-labelledby="boneTexture" aria-hidden="true">
+      <div class="modal-dialog modal-special modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="boneTextured">The Bone Handle with Textured Color Mug</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6">
+                <div id="carouselBoneTextured" class="carousel slide" data-bs-ride="carousel">
+
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselBoneTextured" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselBoneTextured" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselBoneTextured" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselBoneTextured" data-bs-slide-to="3" aria-label="Slide 0"></button>
+                  </div>
+
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/bone-handle-dimple/bone-handle-dimple1.JPG" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/bone-handle-dimple/bone-handle-dimple2.JPG" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/bone-handle-dimple/bone-handle-dimple3.JPG" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/bone-handle-dimple/bone-handle-dimple4.JPG" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselBoneTextured" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselBoneTextured" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+             </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>      <!--here ends an item -->
+
+  <div class="col col-sm-3 mt-5">                 <!--here begins an item -->
+    <div class="card card-item border-0" style="max-width: 9rem; min-width: 9rem;">
+      <img class="card-img-top" src="img/mush-butterdish/mush-butterdish1.JPG" alt="Card image cap">
+          <div class="card-body">
+              <p class="text-left card-title text-nowrap">Butter Dish</p>
+              <div class="row">
+                <div class="col-4 ms-1  ">
+                  <button type="button" class="btn btn-primary btn-sm text-nowrap" data-target="#addToCart"><i class="fa fa-cart-plus fa-lg"></i>
+                  </button>
+                </div>
+                <div class="col">
+                  <button type="button" class="btn btn-success btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#viewButterDish">
+                  View
+                  </button>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <div class="modal fade" id="viewButterDish" tabindex="-1" aria-labelledby="butterdish" aria-hidden="true">
+    <div class="modal-dialog modal-special modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="butterDish">Butter Dish With Mushroom Lid</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <div id="carouselButterDish" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselButterDish" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselButterDish" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselButterDish" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselButterDish" data-bs-slide-to="3" aria-label="Slide 0"></button>
+                </div>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/mush-butterdish/mush-butterdish1.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/mush-butterdish/mush-butterdish2.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/mush-butterdish/mush-butterdish3.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/mush-butterdish/mush-butterdish4.JPG" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselButterDish" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselButterDish" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+           </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add To Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>      <!--here ends an item -->
+
+<div class="col col-sm-3 mt-5">                 <!--here begins an item -->
+  <div class="card card-item border-0" style="max-width: 9rem; min-width: 9rem;">
+    <img class="card-img-top" src="img/eye-cup-large/eye-cup-large2.jpg" alt="Card image cap">
+        <div class="card-body">
+            <p class="text-left card-title text-nowrap">Eyes and Mouth</p>
+            <div class="row">
+              <div class="col-4 ms-1  ">
+                <button type="button" class="btn btn-primary btn-sm text-nowrap" data-target="#addToCart"><i class="fa fa-cart-plus fa-lg"></i>
+                </button>
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-success btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#viewEyesLarge">
+                View
+                </button>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="viewEyesLarge" tabindex="-1" aria-labelledby="bigEyeMug" aria-hidden="true">
+  <div class="modal-dialog modal-special modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="butterDish">Eyes and Mouth Mug Large</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-6">
+            <div id="carouselEyeMugLarge" class="carousel slide" data-bs-ride="carousel">
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselEyeMugLarge" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselEyeMugLarge" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselEyeMugLarge" data-bs-slide-to="2" aria-label="Slide 0"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/eye-cup-large/eye-cup-large1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/eye-cup-large/eye-cup-large2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/eye-cup-large/eye-cup-large3.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselEyeMugLarge" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselEyeMugLarge" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+         </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>      <!--here ends an item -->
+</div><!--here ends the second row-->
+      <p class="text-center fw-light mt-3">You've reached the end!</p>
+
+      <footer class="site-footer" style="margin-top: 300px">
+        <div class="container">
+          <div class="row">
+                <div class="col text-center">
+                    <a role="button" class="btn btn-link" href="https://www.instagram.com/ferraricortney/">Follow Me</a>
+                    <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/ferraricortney/"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+          <div class="row">
+                <div class="col text-center">
+                    <a role="button" class="btn btn-link" href="mailto:cortneyferrariart@gmail.com"><i class="fa fa-envelope-o"></i>cortneyferrariart@gmail.com</a>
+                    <p class="text-center fw-light">© 2021 Cortney Ferrari</p>
+                </div>         
+           </div>
+        </div>
+      </footer>
+
+  </div> 
+
+  
+            
+</div> <!--here ends the card special-->
+
+
+
+
+
+
+
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="module" src="main.js"></script>
+<script type="module" src="cursor.js"></script>
+
+
+</body>
+</html>

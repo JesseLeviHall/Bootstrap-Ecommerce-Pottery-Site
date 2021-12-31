@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@563&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Cortney's Creative Ceramics</title>
+    <title>About Me</title>
+</head>
+<body>
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class= "position-absolute top-0 start-50 translate-middle-x">
+                        <canvas  id="c"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </header>
+
+    <nav class="navbar navbar-nav navbar-expand-md navbar-dark" style="margin-top:150px;">
+        <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav position-absolute top-100 start-50 translate-middle">
+                    <li class="nav-item px-5 "><a class="nav-link" href="index.html">Shop</a></li>
+                    <li class="nav-item px-5"><a class="nav-link" href="aboutme.html">About</a></li>
+                    <li class="nav-item px-5"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item px-5"><a class="nav-link active" href="contactme.html">Contact</a></li>
+                    <li class="nav-item px-5"><button type="button"class="btn btn-outline-light btn-sm    text-nowrap" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa              fa-shopping-cart"></i> Cart (3)
+                    </button>
+                    <li class="nav-item px-5"><a href="checkout.html" class="btn btn-outline-light btn-sm text-nowrap"><i class="fa fa-long-arrow-right"></i> Checkout</a></li>   
+                </ul>  
+            </div>
+        </div>
+      </nav>
+    
+      <div class="modal border-rounded" id="cartModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="container">
+                <div class="card card-checkout border-rounded" >
+                    <div class="card-body bg-light">
+                        <div class="row g-5">
+                            <div class="col order-md-last">
+                                <h1 class="d-flex justify-content-between align-item-center mb-3">
+                                    <span class="text-dark">Your Cart</span>
+                                    <span id="cartCount" class="badge bg-primary rounded-pill"><i class="fa fa-shopping-cart"></i> 3</span>
+                                </h1>
+                            </div>
+                        </div>  
+                        <div class="row g-5">
+                            <div class="col">
+                                <ul class="list-group mb-3">
+                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h2 class="my-0">Eye Mug Large</h2>
+                                            <small class="text-muted">Eyeball mug mouth handle...big version <span class="text-muted"><button type="button" class="btn btn-outline-dark btn-sm text-nowrap">Remove</button></span> </small>
+                                        </div>
+                                            <span class="text-muted">$25</span>                         
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h2 class="my-0">Eye Mug Large</h2>
+                                            <small class="text-muted">Eyeball mug mouth handle...big version <span class="text-muted"><button type="button" class="btn btn-outline-dark btn-sm text-nowrap">Remove</button></span> </small>
+                                        </div>
+                                            <span class="text-muted">$25</span>                               
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h2 class="my-0">Eye Mug Large</h2>
+                                            <small class="text-muted">Eyeball mug mouth handle...big version <span class="text-muted"><button type="button" class="btn btn-outline-dark btn-sm text-nowrap">Remove</button></span> </small>
+                                        </div>
+                                            <span class="text-muted">$25</span>                               
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                        <span>Total (USD)</span>
+                                        <strong>$75</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+            <div class="modal-footer bg-dark">
+              <a class="btn btn-primary btn-sm text-nowrap" role="button" href="checkout.html"><i class="fa fa-long-arrow-right"></i>Checkout</a> 
+              <button type="button" class="btn btn-outline-light btn-sm text-nowrap" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<div class="container">
+    <div class="card card-special border-0" style="margin-top:145px;">
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                <div class="card mx-auto" style="max-width: 300px;">
+                    <div class="card-header bg-dark text-center">
+                        <h5 class="mx-auto">Address</h5>
+                    </div>
+                    <div class="card-body bg-dark text-center">
+                        <address class="mx-auto">
+                            P.O Box 8204 <br />
+                            Albuquerque, NM 87198<br />
+                            U.S.A.
+                        </address>
+                    <div class="col col-sm-order-last">
+                        <a role="button" class="btn btn-link" href="mailto:cortneyferrariart@gmail.com"><i class="fa fa-envelope-o"></i> Send An E-mail to cortneyferrariart@gmail.com</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-5" />
+
+            <div class="row text-center">
+                <div class="col-12 mt-3">
+                    <h2 class="o">Or Send A Message Here  </h2>   
+                </div>
+                <div class="col-md-10">
+                    <form>
+                        <div class="form-group row m-2">
+                            <label for="firstName" class="col-md-2 col-form-label"></label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="lastName" class="col-md-2 col-form-label"></label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="areaCode" class="col-md-2 col-form-label"></label>
+                            <div class="col-5 col-md-3">
+                                <input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area code" />
+                            </div>
+                            <div class="col-7">
+                                <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="email" class="col-md-2 col-form-label"></label>
+                            <div class="col-md-10">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" />
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="feedback" class="col-md-2 col-form-label"></label>
+                            <div class="col-md-10">
+                                <textarea class="form-control" placeholder="Your Message" id="feedback" name="feedback" rows="8"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row offset-1">
+                        <div class="col-1 offset-1">
+                            <button type="submit" class="btn btn-small btn-primary mt-4">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
+
+      <footer class="site-footer" style="margin-top:145px;">
+        <div class="container">
+          <div class="row">
+                <div class="col text-center">
+                    <a role="button" class="btn btn-link" href="https://www.instagram.com/ferraricortney/">Follow Me</a>
+                    <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/ferraricortney/"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+          <div class="row">
+                <div class="col text-center">
+                    <a role="button" class="btn btn-link" href="mailto:cortneyferrariart@gmail.com"><i class="fa fa-envelope-o"></i>cortneyferrariart@gmail.com</a>
+                    <p class="text-center fw-light">© 2021 Cortney Ferrari</p>
+                </div>         
+           </div>
+        </div>
+      </footer>
+
+      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script type="module" src="main.js"></script>
+      
+      
+</body>
+</html>
