@@ -15,6 +15,7 @@ const far = 5;
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 2;
 
+//sphere and textures
 const scene = new THREE.Scene();
 const sphereTexture = new THREE.TextureLoader().load('/img/textures/corts.jpg');
 const normalTexture = new THREE.TextureLoader().load('/img/textures/cC8cS.jpg');
@@ -34,7 +35,7 @@ var c = document.getElementById('c');
 
 //spin
 function render(time) {
-  time *= 0.0007;  // convert time to seconds
+  time *= 0.0007;  //converts time to seconds
  
   sphere.rotation.x = time;
   sphere.rotation.y = time;
